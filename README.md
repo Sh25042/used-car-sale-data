@@ -1,34 +1,40 @@
-# Final_PR - Machine Learning Project
+# 🚗 Used Car Price Analysis
 
-This project implements various data preprocessing and classification techniques to analyze a dataset and predict binary outcomes. The goal is to apply machine learning algorithms with a focus on Principal Component Analysis (PCA) and model evaluation.
+This project performs data analysis and visualization on a used car price dataset to uncover trends, handle missing values, and explore relationships between key features such as price, mileage, brand, and manufacturing year.
 
-## 📁 Project Structure
+---
 
-- `Final_PR.ipynb`: Jupyter Notebook containing the complete implementation of data loading, preprocessing, PCA, model training, and evaluation.
+## 📁 Dataset
 
-## 🧠 Objectives
+**File:** `used_car_price_dataset_extended final.csv`  
+The dataset contains information about used cars, including:
 
-- Perform data cleaning and exploratory data analysis (EDA).
-- Apply feature scaling and dimensionality reduction using PCA.
-- Implement classification algorithms such as:
-  - Logistic Regression
-  - Decision Tree
-  - Random Forest
-  - Support Vector Machine (SVM)
-- Evaluate models using metrics like:
-  - Accuracy
-  - Confusion Matrix
-  - Precision, Recall, and F1-Score
+- `price_usd`
+- `make_year`
+- `mileage_kmpl`
+- `fuel_type`
+- `engine_cc`
+- `brand`
+- ...and more
 
-## 📊 Dataset
+---
 
-- **File**: `heart_disease.csv` *(you may need to download or provide this file)*
-- **Description**: Contains patient data related to heart disease (e.g., age, cholesterol, blood pressure).
-- **Target Variable**: Binary classification (presence or absence of heart disease).
+## 🛠️ Technologies Used
 
-## ⚙️ Requirements
+- Python
+- NumPy
+- Pandas
+- Seaborn
+- Matplotlib
+- Missingno
 
-Make sure to install the required Python packages before running the notebook:
+---
 
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+## 📊 Key Steps in Analysis
+
+### 1. 📥 Load and Inspect Data
+
+```python
+data = pd.read_csv('used_car_price_dataset_extended final.csv')
+data.info()
+data.describe(include='all')
